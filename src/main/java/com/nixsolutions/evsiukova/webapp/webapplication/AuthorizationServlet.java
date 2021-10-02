@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 @WebServlet(name = "welcome", value = "/welcome")
-public class HelloServlet extends HttpServlet {
+public class AuthorizationServlet extends HttpServlet {
     private String message;
 
     public void init() {

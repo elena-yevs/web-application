@@ -2,18 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Welcome</title>
 </head>
 <body>
 <h1><%= "Welcome!" %>
 </h1>
 <br/>
-<form action="/welcome" method="post">
-    First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br>
+<form action="${pageContext.request.contextPath}/welcome" method="post">
+    First name: <label>
+    <input type="text" name="fname">
+</label><br>
+    Last name: <label>
+    <input type="text" name="lname">
+</label><br>
     <input type="submit" value="Login">
 </form>
 
-<a href="hello-servlet">Hello Servlet</a>
+<a href="welcome">Login</a>
 </body>
 </html>
