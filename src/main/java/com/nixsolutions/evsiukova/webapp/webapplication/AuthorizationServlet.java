@@ -10,10 +10,18 @@ public class AuthorizationServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=utf-8");
         String email = request.getParameter("email");
-
         PrintWriter printWriter = response.getWriter();
-        printWriter.println("Hello, " + email + "!");
+
+
+
+        if(email.equals("admin")) {
+            response.sendRedirect("admin.jsp");
+        }
+        else {
+            printWriter.println("Hello, " + email + "!");
+        }
         printWriter.close();
     }
+
 
 }
