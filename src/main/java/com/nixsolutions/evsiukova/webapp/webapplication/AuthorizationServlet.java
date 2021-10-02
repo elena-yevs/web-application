@@ -6,22 +6,14 @@ import javax.servlet.annotation.*;
 
 @WebServlet(name = "welcome", value = "/welcome")
 public class AuthorizationServlet extends HttpServlet {
-    private String message;
-
-    public void init() {
-        message = "Welcome";
-    }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=utf-8");
+        String email = request.getParameter("email");
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+        PrintWriter printWriter = response.getWriter();
+        printWriter.println("Hello, " + email + "!");
+        printWriter.close();
     }
 
-    public void destroy() {
-    }
 }
