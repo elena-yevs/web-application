@@ -8,7 +8,7 @@
 <h1><%= "Welcome!" %>
 </h1>
 <br/>
-<form action="${pageContext.request.contextPath}/welcome" method="get">
+<form action="${pageContext.request.contextPath}/welcome" method="post">
     Email: <label>
     <input type="text" name="email">
 </label><br>
