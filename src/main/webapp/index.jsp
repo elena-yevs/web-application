@@ -8,16 +8,15 @@
 <h1><%= "Welcome!" %>
 </h1>
 <br/>
-<form action="${pageContext.request.contextPath}/welcome" method="post">
-    First name: <label>
-    <input type="text" name="fname">
+<form action="${pageContext.request.contextPath}/welcome" method="get">
+    Email: <label>
+    <input type="text" name="email">
 </label><br>
-    Last name: <label>
-    <input type="text" name="lname">
+    Password: <label>
+    <input type="password" name="password">
 </label><br>
     <input type="submit" value="Login">
 </form>
 
-<a href="welcome">Login</a>
 </body>
 </html>
