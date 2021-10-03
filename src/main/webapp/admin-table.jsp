@@ -2,13 +2,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
-<%@ page import="com.nixsolutions.evsiukova.connection.ConnectionManager" %><%--
-  Created by IntelliJ IDEA.
-  User: elena
-  Date: 03.10.2021
-  Time: 20:25
-  To change this template use File | Settings | File Templates.
---%>
+
 <%
     String driver = "org.postgresql.Driver";
     String connectionUrl = "jdbc:postgresql://localhost:5432/admin-users";
