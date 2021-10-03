@@ -22,6 +22,4 @@ public class AuthorizationServlet extends HttpServlet {
         }
         printWriter.close();
     }
-
-
 }

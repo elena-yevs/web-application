@@ -13,6 +13,6 @@
 <body>
 <h2>Welcome <%= request.getAttribute("email") %> !</h2>
 
-<a href="logout.jsp">LogOut</a>
+<p>Click <a href="logout.jsp">here</a> to log out</p>
 </body>
 </html>
