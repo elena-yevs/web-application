@@ -30,6 +30,5 @@ public class AdminServlet extends HttpServlet {
         } catch (ClassNotFoundException classNotFoundException) {
             classNotFoundException.printStackTrace();
         }
-
     }
 }
