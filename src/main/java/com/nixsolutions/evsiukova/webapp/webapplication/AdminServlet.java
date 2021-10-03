@@ -26,7 +26,7 @@ public class AdminServlet extends HttpServlet {
             UserManipulation userManipulation = new UserManipulation(connection);
             ArrayList<User> users = userManipulation.findAll();
             request.setAttribute("users", users);
-            getServletContext().getRequestDispatcher("/admin.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/admin-table.jsp").forward(request, response);
         } catch (ClassNotFoundException classNotFoundException) {
             classNotFoundException.printStackTrace();
         }
