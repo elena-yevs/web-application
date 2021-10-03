@@ -1,6 +1,7 @@
 package com.nixsolutions.evsiukova.webapp.webapplication;
 
 import java.io.*;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -8,7 +9,7 @@ import javax.servlet.annotation.*;
 public class AuthorizationServlet extends HttpServlet {
     private final static String ADMIN = "admin";
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html;charset=utf-8");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -16,8 +17,8 @@ public class AuthorizationServlet extends HttpServlet {
         if (email.equals(ADMIN) && password.equals(ADMIN)) {
             response.sendRedirect("admin-table.jsp");
         } else {
-            //printWriter.println("Hello, " + email + "!");
-            response.sendRedirect("user.jsp");
+            request.setAttribute("email", email);
+            request.getRequestDispatcher("user.jsp").forward(request, response);
         }
         printWriter.close();
     }

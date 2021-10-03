@@ -11,7 +11,8 @@
     <title>WelcomeUser</title>
 </head>
 <body>
-<h2>Welcome user !</h2>
+<h2>Welcome <%= request.getAttribute("email") %> !</h2>
+
 <a href="logout.jsp">LogOut</a>
 </body>
 </html>
