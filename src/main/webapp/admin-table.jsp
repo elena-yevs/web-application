@@ -70,6 +70,7 @@
             <TD><input type="button" name="delete" value="Delete" onClick="javascript:window.location='delete-user.jsp';"
                        style="background-color:#ff0000;font-weight:bold;color:#ffffff;"></TD>
         </TR>
+
         </tr>
 
 

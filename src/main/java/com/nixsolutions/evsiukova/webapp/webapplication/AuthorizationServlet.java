@@ -9,6 +9,7 @@ import javax.servlet.annotation.*;
 public class AuthorizationServlet extends HttpServlet {
     private final static String ADMIN = "admin";
 
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html;charset=utf-8");
         String email = request.getParameter("email");
@@ -16,9 +17,11 @@ public class AuthorizationServlet extends HttpServlet {
         PrintWriter printWriter = response.getWriter();
         if (email.equals(ADMIN) && password.equals(ADMIN)) {
             response.sendRedirect("admin-table.jsp");
+
         } else {
             request.setAttribute("email", email);
             request.getRequestDispatcher("user.jsp").forward(request, response);
+
         }
         printWriter.close();
     }
